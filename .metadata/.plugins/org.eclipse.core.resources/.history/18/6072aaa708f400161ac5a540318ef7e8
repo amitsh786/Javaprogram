@@ -1,0 +1,81 @@
+package com.Amit.BasicProg.UtilityClass;
+import java.io.*;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class UtilitySortingInt {
+	public static void main(String[] args) {
+
+		// bubbleSortInt();
+		//bubbleSortString();
+		binarySearchInt();
+
+	}
+
+	private static void bubbleSortString() {
+		Scanner scn = new Scanner(System.in);
+		System.out.println("enter the string");
+		String nu = scn.nextLine();
+		char[] num = nu.toCharArray();
+		char temp;
+		for (int m = 0; m < num.length - 1; m++) {
+			for (int i = 0; i < num.length - 1 - m; i++) {
+				if (num[i] > num[i + 1]) {
+					temp = num[i];
+					num[i] = num[i + 1];
+					num[i + 1] = temp;
+				}
+			}
+		}
+		System.out.println(Arrays.toString(num));
+	}
+
+	private static void bubbleSortInt() {
+		Scanner scn = new Scanner(System.in);
+		System.out.println("enter the size of array");
+		int n = scn.nextInt();
+		int[] num = new int[n];
+		System.out.println("enter" + " " + n + "elements");
+		for (int i = 0; i < num.length; i++) {
+			num[i] = scn.nextInt();
+		}
+		int temp;
+		for (int m = 0; m < num.length - 1; m++) {
+			for (int i = 0; i < num.length - 1 - m; i++) {
+				if (num[i] > num[i + 1]) {
+					temp = num[i];
+					num[i] = num[i + 1];
+					num[i + 1] = temp;
+				}
+			}
+
+		}
+		System.out.println(Arrays.toString(num));
+	}
+private static void binarySearchInt() 
+{
+	Scanner scn = new Scanner(System.in);
+	System.out.println("enter the size of array");
+	int n = scn.nextInt();
+	int[] num = new int[n];
+	System.out.println("enter"+ " "+ n+"elements");
+	for (int i = 0; i < num.length; i++) {
+		num[i]=scn.nextInt();
+	}
+	System.out.println("enter the value that you have to search");
+	int n1 = scn.nextInt();
+	int start=0;
+	int last=num.length-1;
+	for(int i=0;i<last;i++)
+	{
+		int mid=(start+last)/2;
+		if(num[mid]==n1)
+		
+			System.out.println("you searched value is the middle value");
+		
+		else if(num[mid]>n1)
+			last=mid-1;
+		else
+			start=mid+1;
+	}}
+}//end of the class;

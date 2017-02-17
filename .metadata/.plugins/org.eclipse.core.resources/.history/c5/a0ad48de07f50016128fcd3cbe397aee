@@ -1,0 +1,30 @@
+package com.bridgeit.amit.programs;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+import com.bridgeit.amit.util.utility;
+
+public class CashCounter {
+
+	public static void main(String[] args)
+	{
+		utility ut=new utility();
+		System.out.println("WelCome to tanatan bank....lavdese");
+		
+		Queue<Customer> que=new LinkedList<Customer>();
+		
+		System.out.println("Enter your name..");
+		String name = ut.inputString();
+		System.out.println("Customer name: "+name);
+		System.out.println("please enter amount to be trancation...");
+		double amount = ut.inputDouble();
+		
+		System.out.println("please Come in Queue");
+		que.add(new Customer(name, 20, amount));
+		System.out.println("Customer added in queue");
+		System.out.println("\nPlease enter the choice\n 1 for Deposite and 2 for withdraw");
+		
+	}
+
+}

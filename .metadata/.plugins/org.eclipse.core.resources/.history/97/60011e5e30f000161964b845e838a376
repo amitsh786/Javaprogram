@@ -1,0 +1,28 @@
+package com.Amit.pro1;
+import java.util.Scanner;
+public class UserInput 
+{
+public static void main(String[] args)
+{
+	Scanner scn=new Scanner(System.in);
+	System.out.println("Enter the UserName with minimum 3 character");
+	String Username=scn.nextLine();
+	Scanner scn1=new Scanner(System.in);
+	System.out.println("Enter the ProperName with minimum 3 character");
+	String Propername=scn1.nextLine();
+	checkUserName(Username,Propername);
+}
+private static void checkUserName(String username,String Propername) 
+{
+	System.out.println("if the UserName Is Perfect means within the Given range the it will print the UserName message otherwise it will print Proper Name message");
+	
+	if(username.length()<=3)
+  {
+	System.out.println("Hello"+" "+username+" "+"How Are You");
+  }
+	else
+	{
+		System.out.println("Hello"+" "+Propername+" "+"How Are You");
+	
+	}
+}}

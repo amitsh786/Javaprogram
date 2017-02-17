@@ -1,0 +1,43 @@
+package com.Amit.BasicProg.OrderedLinkedList;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Arrays;
+import java.util.LinkedList;
+public class OrderedList 
+{
+	public static void main(String[] args) throws FileNotFoundException 
+	{
+		LinkedList<String> l=new LinkedList<String>();
+		FileReader fr=new FileReader("/home/bridgeit/amitjavaprogram/eclipseprogram/BasicJavaProject/src/com/Amit/ProgramUtility/amitsh.txt");
+		BufferedReader br=new BufferedReader(fr);
+        String s=null;
+		char[] ch=null;
+		try
+		{
+			s=br.readLine();
+			System.out.println(s);
+			String[] s2=s.split(" ");
+			for(int i=1;i<s2.length;i++)
+			{
+				System.out.print(s2[i]);
+			}
+			Arrays.sort(ch);
+			for(int i=0;i<ch.length;i++)
+			{
+		     	System.out.println(ch[i]);
+			}
+		
+			/*for(int i=0;i<s.length();i++)
+			{
+				l.add(s);
+			}*/
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+	
+     	}
+
+	}
+}

@@ -1,0 +1,48 @@
+package com.Amit.BasicProg.BankingQueue;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class CashCounterTester
+{
+	public static void main(String[] args) {
+		Scanner scn=new Scanner(System.in);
+		Account a=new Account();
+		System.out.println("enter the name for your account ");
+		String name=scn.nextLine();
+		a.setName(name);
+		System.out.println("enter your gender");
+		String gender=scn.nextLine();
+		a.setGender(gender);
+		System.out.println("enter your current age");
+		int age=scn.nextInt();
+		if(age>18)
+		{
+			System.out.println("hello"+"  "+name+" "+"you are eligible and your accopunt can be crearted");
+		     a.setAge(age);
+		}
+		else
+		{
+			System.out.println("your age person cannot create the bank account");
+		}
+		System.out.println("enter the account number of ur wish upto 9 digit number");
+		long accno=scn.nextLong();
+		a.setAccno(accno);
+		System.out.println("enter the i8nitial amount that you want to set");
+		double d=scn.nextDouble();
+		a.setAmount(d);
+		System.out.println("<--------------------_______------------------____>");
+		System.out.println("enter the operation that u want to perform 1:->Deposit 2:->cashwithdraw 3:->balance enquiry");
+		int n=scn.nextInt(); 
+		BankingClassQueue 	bcq=new BankingClassQueue ();	
+		switch(n)
+		{
+		    case 1 :
+		    	bcq.enqueue(a);
+			
+			
+		}
+	}
+
+}

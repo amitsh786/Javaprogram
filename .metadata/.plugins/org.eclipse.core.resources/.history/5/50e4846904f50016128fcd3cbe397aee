@@ -1,0 +1,18 @@
+package com.Amit.BasicProg.BankingQueue;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BankingClassQueue 
+{
+	//Queue q=new LinkedList();
+	public boolean enqueue(Account a)
+	{
+		
+		return false;
+	}
+		
+	
+	
+
+}

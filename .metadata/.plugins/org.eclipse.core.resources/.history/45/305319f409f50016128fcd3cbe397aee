@@ -1,0 +1,30 @@
+package com.bridgeit.amit.util;
+
+import java.util.Scanner;
+
+import com.bridgeit.amit.programs.Customer;
+
+public class utility 
+{
+	Scanner scn = new Scanner(System.in);
+	
+	public String inputString(){
+		return scn.nextLine();
+	}
+	
+	public double inputDouble(){
+		return scn.nextDouble();
+	}
+	
+	public int inputInt(){
+		return scn.nextInt();
+	}
+	
+	public double trans(double cash,int choice)
+	{
+		Customer c = new Customer();
+		double amount = c.getAmt();
+		
+		
+	}
+}

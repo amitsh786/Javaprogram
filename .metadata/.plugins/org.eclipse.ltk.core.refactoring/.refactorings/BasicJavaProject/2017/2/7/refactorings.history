@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BasicJavaProject/src/com/Amit/BasicProg/UtilityClass/UtilitySorting.java&apos; to &apos;UtilitySortingInt.java&apos;" description="Rename resource &apos;UtilitySorting.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/Amit/BasicProg/UtilityClass/UtilitySorting.java" name="UtilitySortingInt.java" stamp="1487218623720" updateReferences="true"/>
+</session>

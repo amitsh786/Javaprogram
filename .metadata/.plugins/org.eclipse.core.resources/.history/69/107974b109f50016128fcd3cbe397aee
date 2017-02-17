@@ -1,0 +1,42 @@
+package com.bridgeit.amit.util;
+
+import java.util.Scanner;
+
+public class utility 
+{
+	Scanner scn = new Scanner(System.in);
+	
+	public String inputString(){
+		return scn.nextLine();
+	}
+	
+	public double inputDouble(){
+		return scn.nextDouble();
+	}
+	
+	public int inputInt(){
+		return scn.nextInt();
+	}
+	
+	public double trans(double amount,int choice)
+	{
+		switch (choice) 
+		{
+		case 1:
+			cash+=amount;
+			System.out.println("Amount Deposited....");
+			que.remove();
+			System.out.println("Customer removed from queue");
+			break;
+		case 2:
+			cash-=amount;
+			System.out.println("Amount withdraw");
+			que.remove();
+			System.out.println("Customer removed from queue");
+			break;
+		default:
+			System.out.println("Invalid option please enter the valid user");
+			break;
+		}
+	}
+}

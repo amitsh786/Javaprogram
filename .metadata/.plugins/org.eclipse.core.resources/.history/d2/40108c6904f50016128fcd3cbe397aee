@@ -1,0 +1,12 @@
+package com.Amit.BasicProg.BankingQueue;
+
+public class Account
+{
+	String name;
+	int age;
+	String gender;
+	long accno;
+	
+
+
+}

@@ -1,0 +1,10 @@
+package com.Amit.BasicProg.UtilityClass;
+
+import java.util.Scanner;
+
+public class UtilitySortingInt
+{
+	Scanner scn=new Scanner(System.in);
+	
+	public static void binarySearch()
+}

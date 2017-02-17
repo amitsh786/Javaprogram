@@ -1,0 +1,25 @@
+package com.Amit.BasicProg;
+
+import java.util.Scanner;
+
+public class removespace 
+{
+	public static void main(String[] args)
+	{
+		Scanner scn = new Scanner(System.in);
+		System.out.println("please enter String you want");
+		String s1=scn.nextLine();
+		char ch[]=s1.toCharArray();
+		int i=0;
+		int x=ch.length;
+		int count=0;
+		while(i<x && ch[i]!=' ')
+			
+		{
+			count++;
+			i++;
+		}
+		System.out.println(count);
+	}
+
+}

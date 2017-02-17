@@ -1,0 +1,17 @@
+package com.bridgeit.amit.programs;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class CashCounter {
+
+	public static void main(String[] args)
+	{
+		System.out.println("WelCome to tanatan bank....lavdese");
+		
+		Queue<Customer> que=new LinkedList<Customer>();
+		
+		System.out.println('');
+	}
+
+}

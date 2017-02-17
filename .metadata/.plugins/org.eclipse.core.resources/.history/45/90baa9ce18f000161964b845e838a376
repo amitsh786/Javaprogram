@@ -1,0 +1,48 @@
+package com.Amit.Flip;
+
+import java.util.Scanner;
+
+public class FlipCoin 
+{
+public static void main(String[] args) 
+{
+	Scanner scn=new Scanner(System.in);
+	System.out.println(" hello Good morning sir");
+	System.out.println("Plz say your good name");
+	String goodname=scn.nextLine();
+	System.out.println("so"+" "+goodname+" "+"how many time you want to flip the coin");
+	int fliptime=scn.nextInt();
+
+	countofheadandtail(fliptime);
+}
+//method to find the number of head and tail count
+public static void countofheadandtail(int fliptime) 
+{
+	int headcount=0;
+	int tailcount=0;
+	
+if(Math.random()<0.5)
+{
+	tailcount++;
+	System.out.println("The number oF tail count is"+" "+tailcount);
+
+}
+else
+{
+	headcount++;
+	System.out.println("The number oF head count is"+" "+headcount);
+
+}
+percentofheadtails(tailcount,headcount,fliptime);
+}//close of the countofheadandtail
+
+// method to find the percentage ofpercentofheadtails
+private static void percentofheadtails(int tailcount, int headcount, int fliptime) 
+   {
+	int percentofhead=headcount/fliptime*100;
+	int  percentoftail=100-percentofhead;
+	System.out.println("the pecentage of head is "+" "+percentofhead+"%");
+	System.out.println("the pecentage of tail is "+" "+percentoftail+"%");
+	}
+
+}//close of the class

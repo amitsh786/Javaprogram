@@ -1,0 +1,55 @@
+package com.Amit.BasicProg.BankingQueue;
+
+public class Account
+{
+	String name;
+	int age;
+	String gender;
+	long accno;
+	
+	
+	/*public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public long getAccno() {
+		return accno;
+		
+	}
+	public void setAccno(long accno) {
+		this.accno = accno;
+	}
+	public static double deposit(double amt,double amount)
+	{
+		amount=amount+amt;
+		return getAmount();
+	}
+	public static double withdraw(double amt)
+	{
+		amount=amount-amt;
+		return getAmount();
+	}
+	public static double balanceEnquiry()
+	{
+		return getAmount();
+	}
+	 public String toString()
+	{
+		return("["+"name:"+getName()+","+"age:"+getAge()+","+"gender:"+getGender()+","+"accno:"+getAccno());
+	}
+
+}

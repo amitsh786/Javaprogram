@@ -1,0 +1,33 @@
+package com.Amit;
+
+import java.util.Scanner;
+
+public class Split 
+{
+	public static void main(String[] args) {
+		
+		Scanner scn = new Scanner(System.in); 
+		System.out.println("Plzs enter the String");
+		String s=scn.nextLine();
+		char[] ch=s.toCharArray();
+		String[] ch1=new String[5];
+		s=" ";
+		int j=0,k=0;
+		for(int i=0;i<ch.length-1;i++)
+		{
+			while(ch[i]!=' ')
+			{
+			   s=s+ch[i];
+		    	i++;
+			}
+			 ch1[j]=s;
+			 j++;
+			 s=" ";
+		}
+		for(String s1:ch1)
+		{
+			System.out.println(s1);
+		}
+	}
+
+}

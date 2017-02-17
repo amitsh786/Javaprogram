@@ -1,0 +1,151 @@
+package com.Amit.BasicProg.UnOrderedLinkedList;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+/*class Node {
+	Object data;
+	Node link;
+	static int size = 0;
+
+	public Node(Object data) {
+		this.data = data;
+		this.link = null;
+		size++;
+	}
+
+}
+
+public class UnorderedList {
+	static Node head = null;
+
+	static Node temp = null;
+	static int count = 0;
+
+	public static boolean add(Object data) {
+		Node n = new Node(data);
+		if (head == null) {
+			head = n;
+			count++;
+			return true;
+		}
+		temp = head;
+		while (temp.link == null) {
+			temp.link = n;
+			count++;
+		}
+		temp = temp.link;
+
+		return true;
+	}
+
+	public static Object remove(Object data) {
+		Node temp;
+		if (head.data == data) {
+			count--;
+			return data;
+		}
+		temp = head;
+		temp = temp.link;
+		while (temp.data == data) {
+			count--;
+			return temp.data;
+		}
+
+		return null;
+	}
+
+	public static int size() {
+		if (head == null)
+			return 0;
+		return count;
+	}
+
+	public static boolean addFirst(Object data) {
+		Node temp;
+		Node n = new Node(data);
+		if (head == null) {
+			head = n;
+			return true;
+		} else {
+			temp = head;
+			head = n;
+			n.link = temp;
+			return true;
+		}
+	}*/
+public class UnorderedList {
+	public static void main(String[] args) throws FileNotFoundException {
+
+		LinkedList<String> l = new LinkedList<String>();
+		FileReader fr = new FileReader(
+				"/home/bridgeit/amitjavaprogram/eclipseprogram/BasicJavaProject/src/com/Amit/ProgramUtility/amit.txt");
+		BufferedReader br = new BufferedReader(fr);
+		String s = null;
+		String sw = "";
+		int flag = 0;
+		try {
+			s = br.readLine();
+			System.out.println(s);
+			String[] s1 = s.split(" ");
+			for (int i = 0; i < s1.length; i++) {
+				l.add(s1[i]);
+			}
+			Scanner scn = new Scanner(System.in);
+			System.out.println("enter the word thaT U HAVE TO SEARCH");
+			String s2 = scn.nextLine();
+			for (int i = 0; i < l.size(); i++) {
+				if (s2.equalsIgnoreCase(l.get(i))) {
+					System.out.println("the word found we have to remove this one");
+					String s3 = l.remove(i);
+					System.out.println(s3);
+					flag = 1;
+				}
+				sw += l.get(i) + " ";
+			}
+			System.out.println(sw);
+			writefile(sw);
+
+			if (flag == 0) {
+				System.out.println("the word not found");
+				l.add(s2);
+				sw += s2;
+				writefile(sw);
+				System.out.println(sw);
+			}
+			for (int i = 0; i < l.size(); i++) {
+				System.out.print(l.get(i) + " ");
+
+			}
+			System.out.println();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void writefile(String s) {
+		BufferedWriter writer = null;
+		try {
+			writer = new BufferedWriter(new FileWriter(
+					"/home/bridgeit/amitjavaprogram/eclipseprogram/BasicJavaProject/src/com/Amit/ProgramUtility/amit.txt"));
+			writer.write(s);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (writer != null)
+					writer.close();
+			} catch (IOException e) {
+			}
+		}
+	}
+
+}

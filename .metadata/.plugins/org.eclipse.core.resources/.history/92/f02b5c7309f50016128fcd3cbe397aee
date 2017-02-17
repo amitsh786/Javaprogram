@@ -1,0 +1,25 @@
+package com.bridgeit.amit.util;
+
+import java.util.Scanner;
+
+public class utility 
+{
+	Scanner scn = new Scanner(System.in);
+	
+	public String inputString(){
+		return scn.nextLine();
+	}
+	
+	public double inputDouble(){
+		return scn.nextDouble();
+	}
+	
+	public int inputInt(){
+		return scn.nextInt();
+	}
+	
+	public double trans(double amt,int choice)
+	{
+		
+	}
+}

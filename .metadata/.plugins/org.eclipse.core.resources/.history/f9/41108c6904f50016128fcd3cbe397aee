@@ -1,0 +1,15 @@
+package com.Amit.BasicProg.BankingQueue;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class BankingClassQueue 
+
+{
+	Queue q=new LinkedList();
+		
+	
+	
+
+}

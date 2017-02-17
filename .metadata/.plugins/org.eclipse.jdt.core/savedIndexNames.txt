@@ -1,0 +1,4 @@
+INDEX VERSION 1.129+/home/bridgeit/amitjavaprogram/eclipseprogram/.metadata/.plugins/org.eclipse.jdt.core
+4249076765.index
+3676915587.index
+2387512126.index

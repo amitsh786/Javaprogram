@@ -1,0 +1,58 @@
+package com.Amit.BasicProg.OrderedLinkedList;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Scanner;
+public class OrderedList 
+{
+	public static void main(String[] args) throws IOException 
+	{
+		LinkedList<Integer> l=new LinkedList<Integer>();
+		FileReader fr=new FileReader("/home/bridgeit/amitjavaprogram/eclipseprogram/BasicJavaProject/src/com/Amit/ProgramUtility/amitsh.txt");
+		BufferedReader br=new BufferedReader(fr);
+			String s="",s1="";
+		
+			while((s=br.readLine())!=null)
+			{
+				s1=s1+s;
+				
+			}
+			br.close();
+			String[] str=s1.split(",");
+			int[] n=new int[str.length];
+			for (int i = 0; i < str.length; i++) {
+				n[i]=Integer.parseInt(str[i]);
+			}
+			Arrays.sort(n);
+			for (int j = 0; j < n.length; j++) {
+				System.out.print(n[j]);
+			}
+			for(int i=0;i<n.length;i++)
+			{
+				l.add(n[i]);
+			}
+			System.out.print(l);
+			System.out.println(" ");
+			Scanner scn=new Scanner(System.in);
+			System.out.println("enter the number theat you wnat to search");
+			int n1=scn.nextInt();
+			int index=0;
+			for(int i=0;i<l.size();i++)
+			{
+				if(n1==l.get(i))
+				{
+					index++;
+					l.remove(i);
+				}}
+					l.add(index, n1);
+				
+			
+			System.out.println(l);
+		}
+	
+
+	}
+

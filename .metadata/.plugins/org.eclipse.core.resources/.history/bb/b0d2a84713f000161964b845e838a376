@@ -1,0 +1,24 @@
+package com.Amit.pro1;
+
+import java.util.Scanner;
+
+public class UserInput 
+{
+public static void main(String[] args)
+{
+	Scanner scn=new Scanner(System.in);
+	System.out.println("Enter the User Name with minimum 3 character");
+	String Username=scn.nextLine();
+	checkUserName(Username);
+}
+private static void checkUserName(String username) 
+{
+	if(username.length()<=3)
+  {
+	System.out.println("Hello"+" "+username+" "+"How Are You");
+  }
+	else
+	{
+		System.out.println("Please Enter the UserName Perfectly");
+	}
+}}

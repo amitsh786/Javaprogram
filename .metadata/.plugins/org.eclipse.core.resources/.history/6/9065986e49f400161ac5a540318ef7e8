@@ -1,0 +1,104 @@
+package com.Amit.BasicProg.UnOrderedLinkedList;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+class Node
+{
+	Object data;
+	Node link;
+	static int size=0;
+	
+	public Node(Object data) 
+	{
+		this.data = data;
+		this.link =null;
+		size++;
+	}
+	
+}
+
+public class UnorderedList 
+{	
+		 static Node head=null;
+	
+		static Node temp=null;
+		static int count=0;
+	public static boolean add(Object data)
+	{
+		Node n=new Node(data);
+		if(head==null)
+		{ 
+			head=n;
+			count++;
+			return true;
+    	}
+		temp=head;
+		while(temp.link==null)
+		{
+			temp.link=n;
+			count++;
+		}
+		temp=temp.link;
+		
+		return true;
+	}
+	public static Object remove(Object data)
+	{ 
+		Node temp;
+		if(head.data==data)
+		{
+			count--;
+			return data;
+		}
+		temp=head;
+		temp=temp.link;
+		while(temp.data==data)
+		{	count--;
+			return temp.data;
+		}
+	
+	return null;
+	}
+	public static int size()
+	{
+		if(head==null)
+			return 0;
+		return count;
+	}
+	public static boolean addFirst(Object data)
+	{
+		Node temp;
+		Node n=new Node(data);
+		if(head==null)
+		{
+			head=n;
+			return true;
+		}
+		else
+		{
+		temp=head;
+		head=n;
+		n.link=temp;
+		return true;
+		}
+    }
+	public static void main(String[] args) throws FileNotFoundException 
+	{
+	
+		FileReader fr = new FileReader("/home/bridgeit/amitjavaprogram/eclipseprogram/BasicJavaProject/src/com/Amit/ProgramUtility/amit.txt");
+		BufferedReader br = new BufferedReader(fr);
+		try {
+			String s=br.readLine();
+			System.out.println(s);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	
+		
+	}
+
+	
+}
